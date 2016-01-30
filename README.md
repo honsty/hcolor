@@ -1,6 +1,6 @@
 #Linux 终端文字及背景颜色
 
-```
+```golang
 package main
 import(
         "fmt"
