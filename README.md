@@ -1,4 +1,4 @@
-# Linux 终端文字及背景颜色
+#Linux 终端文字及背景颜色
 
 ```go
 package main
