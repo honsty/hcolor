@@ -31,7 +31,7 @@ const (
 
 //格式化字体颜色
 func FormatColor(msg string, color Color) string {
-	if runtime.GOOS == "linux" {
+	if runtime.GOOS == "linux" || runtime.GOOS == "darwin" {
 		return fmt.Sprintf("\x1b[0;%dm%s\x1b[0m", color, msg)
 	}
 	return msg
@@ -39,9 +39,8 @@ func FormatColor(msg string, color Color) string {
 
 //格式化背景颜色
 func FormatBGColor(msg string, bgColor, bfColor Color) string {
-	if runtime.GOOS == "linux" {
+	if runtime.GOOS == "linux" || runtime.GOOS == "darwin" {
 		return fmt.Sprintf("\x1b[%d;%dm%s\x1b[0m", bgColor, bfColor, msg)
 	}
 	return msg
-
 }
